@@ -10,7 +10,7 @@ export const NavbarLinks = () => {
         },
         {
            title: 'Rankings',
-           path:'/'
+           path:'/Rankings'
         },
          {
            title: 'Connect a wallet',

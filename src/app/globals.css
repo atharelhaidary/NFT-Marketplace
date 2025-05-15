@@ -23,41 +23,42 @@ body {
 }
 
 
-
-.custom-tabs .ant-tabs-nav-list, .artist-tabs .ant-tabs-nav-list {
+.ant-tabs-tab {
+  border-bottom: none !important;
+}
+.custom-tabs .ant-tabs-nav-list, .artist-tabs .ant-tabs-nav-list, .rankings-tabs .ant-tabs-nav-list {
   display: flex;
   width: 100%;
+  color:red;
+  border:none;
 }
 
 
 /* Make each tab take 50% */
-.custom-tabs .ant-tabs-tab , .artist-tabs .ant-tabs-tab {
+.custom-tabs .ant-tabs-tab , .artist-tabs .ant-tabs-tab,  .rankings-tabs .ant-tabs-tab{
   flex: 1;
   justify-content: center; 
   text-align: center;
   font-size: 22px;
   color: var(--color-icons);
-  border: none; 
-  border-bottom:none;
   border-radius: 0;
-    border-bottom: 2px solid transparent;
 
 }
-
-.custom-tabs .ant-tabs-tab-active, .artist-tabs .ant-tabs-tab-active  {
-  color: var(--color-icons) !important; /* Active tab text color */
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--color-text) !important;
   font-weight: 600;
-  border-bottom: 4px solid var(--color-BoxBackground); /* Active tab bottom border */
 }
 
-.custom-tabs .ant-tabs-ink-bar {
-  background: var(--color-BoxBackground) !important; /* The animated bottom border (ink bar) */
+.custom-tabs .ant-tabs-ink-bar, .artist-tabs .ant-tabs-ink-bar,  .rankings-tabs .ant-tabs-ink-bar{
+  background: var(--color-icons) !important; 
+  border:1px solid  var(--color-icons)
 }
 /* Small screens (phones, < 768px) */
 @media (max-width: 767px) {
   .custom-tabs .ant-tabs-nav, .artist-tabs .ant-tabs-nav {
     padding-left: 20px;
     padding-right: 20px;
+    border:none !important;
   }
 }
 
@@ -66,6 +67,7 @@ body {
   .custom-tabs .ant-tabs-nav, .artist-tabs .ant-tabs-nav{
     padding-left: 50px;
     padding-right: 50px;
+    border:none !important;
   }
 }
 
@@ -74,10 +76,12 @@ body {
   .custom-tabs .ant-tabs-nav, .artist-tabs .ant-tabs-nav {
     padding-left: 200px;
     padding-right: 200px;
+    border:none !important;
   }
 }
-.custom-tabs .ant-tabs-nav::before, .artist-tabs .ant-tabs-nav::before {
+ .ant-tabs-nav::before {
   border: none !important; 
 }
-
-
+.ant-tabs-tab-btn:hover {
+  color:white;
+}

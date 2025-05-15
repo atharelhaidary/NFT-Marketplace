@@ -13,6 +13,7 @@ import { ConnectWallet } from "./ConnectWallet/ConnectWallet";
 import { MarketPlace } from "./MarketPlace/MarketPlace";
 import { Artist } from "./Artist/Artist";
 import { Nft } from "./Nft/Nfts";
+import { Rankings } from "./Rankings/Rankings";
 
 export { 
     Nabvar, 
@@ -29,5 +30,6 @@ export {
     ConnectWallet, 
     MarketPlace,
     Artist,
-    Nft
+    Nft,
+    Rankings,
  }
